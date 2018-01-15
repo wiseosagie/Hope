@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		16AF2E91715498CACA2D7DEF /* Pods_HopeHealingAfrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */; };
 		21D9A791200C603E009E9E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A790200C603E009E9E66 /* AppDelegate.swift */; };
-		21D9A793200C603E009E9E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A792200C603E009E9E66 /* ViewController.swift */; };
 		21D9A796200C603E009E9E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A794200C603E009E9E66 /* Main.storyboard */; };
 		21D9A798200C603E009E9E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A797200C603E009E9E66 /* Assets.xcassets */; };
 		21D9A79B200C603E009E9E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A799200C603E009E9E66 /* LaunchScreen.storyboard */; };
 		21D9A7A6200C651D009E9E66 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7A5200C651D009E9E66 /* SWRevealViewController.m */; };
+		21D9A7AB200C6815009E9E66 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7AA200C6815009E9E66 /* ChatVC.swift */; };
+		21D9A7AD200C6823009E9E66 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7AC200C6823009E9E66 /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21D9A78D200C603E009E9E66 /* HopeHealingAfrica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopeHealingAfrica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D9A790200C603E009E9E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21D9A792200C603E009E9E66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21D9A795200C603E009E9E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21D9A797200C603E009E9E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21D9A79A200C603E009E9E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -27,6 +27,8 @@
 		21D9A7A3200C651C009E9E66 /* HopeHealingAfrica-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopeHealingAfrica-Bridging-Header.h"; sourceTree = "<group>"; };
 		21D9A7A4200C651D009E9E66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		21D9A7A5200C651D009E9E66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		21D9A7AA200C6815009E9E66 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		21D9A7AC200C6823009E9E66 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.release.xcconfig"; sourceTree = "<group>"; };
 		BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeHealingAfrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,8 +68,10 @@
 		21D9A78F200C603E009E9E66 /* HopeHealingAfrica */ = {
 			isa = PBXGroup;
 			children = (
+				21D9A7A9200C67FA009E9E66 /* Model */,
+				21D9A7A8200C67F4009E9E66 /* View */,
+				21D9A7A7200C67ED009E9E66 /* Controller */,
 				21D9A790200C603E009E9E66 /* AppDelegate.swift */,
-				21D9A792200C603E009E9E66 /* ViewController.swift */,
 				21D9A794200C603E009E9E66 /* Main.storyboard */,
 				21D9A797200C603E009E9E66 /* Assets.xcassets */,
 				21D9A799200C603E009E9E66 /* LaunchScreen.storyboard */,
@@ -84,6 +88,29 @@
 				21D9A7A3200C651C009E9E66 /* HopeHealingAfrica-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21D9A7A7200C67ED009E9E66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21D9A7AA200C6815009E9E66 /* ChatVC.swift */,
+				21D9A7AC200C6823009E9E66 /* ChannelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21D9A7A8200C67F4009E9E66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21D9A7A9200C67FA009E9E66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5752B5F441298C9F3ABCE78B /* Frameworks */ = {
@@ -227,7 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21D9A793200C603E009E9E66 /* ViewController.swift in Sources */,
+				21D9A7AD200C6823009E9E66 /* ChannelVC.swift in Sources */,
+				21D9A7AB200C6815009E9E66 /* ChatVC.swift in Sources */,
 				21D9A791200C603E009E9E66 /* AppDelegate.swift in Sources */,
 				21D9A7A6200C651D009E9E66 /* SWRevealViewController.m in Sources */,
 			);
