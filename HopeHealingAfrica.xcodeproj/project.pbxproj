@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AF2E91715498CACA2D7DEF /* Pods_HopeHealingAfrica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */; };
 		21D9A791200C603E009E9E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A790200C603E009E9E66 /* AppDelegate.swift */; };
 		21D9A793200C603E009E9E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A792200C603E009E9E66 /* ViewController.swift */; };
 		21D9A796200C603E009E9E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A794200C603E009E9E66 /* Main.storyboard */; };
 		21D9A798200C603E009E9E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A797200C603E009E9E66 /* Assets.xcassets */; };
 		21D9A79B200C603E009E9E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A799200C603E009E9E66 /* LaunchScreen.storyboard */; };
+		21D9A7A6200C651D009E9E66 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7A5200C651D009E9E66 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,12 @@
 		21D9A797200C603E009E9E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21D9A79A200C603E009E9E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21D9A79C200C603E009E9E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D9A7A3200C651C009E9E66 /* HopeHealingAfrica-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopeHealingAfrica-Bridging-Header.h"; sourceTree = "<group>"; };
+		21D9A7A4200C651D009E9E66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		21D9A7A5200C651D009E9E66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.release.xcconfig"; sourceTree = "<group>"; };
+		BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeHealingAfrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AF2E91715498CACA2D7DEF /* Pods_HopeHealingAfrica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +47,11 @@
 		21D9A784200C603E009E9E66 = {
 			isa = PBXGroup;
 			children = (
+				21D9A7A2200C64E5009E9E66 /* Supporting Files */,
 				21D9A78F200C603E009E9E66 /* HopeHealingAfrica */,
 				21D9A78E200C603E009E9E66 /* Products */,
+				72A64123750FE6298DD536E7 /* Pods */,
+				5752B5F441298C9F3ABCE78B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +76,33 @@
 			path = HopeHealingAfrica;
 			sourceTree = "<group>";
 		};
+		21D9A7A2200C64E5009E9E66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21D9A7A4200C651D009E9E66 /* SWRevealViewController.h */,
+				21D9A7A5200C651D009E9E66 /* SWRevealViewController.m */,
+				21D9A7A3200C651C009E9E66 /* HopeHealingAfrica-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5752B5F441298C9F3ABCE78B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72A64123750FE6298DD536E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */,
+				AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21D9A79F200C603E009E9E66 /* Build configuration list for PBXNativeTarget "HopeHealingAfrica" */;
 			buildPhases = (
+				002BB7EE31B59049B9194527 /* [CP] Check Pods Manifest.lock */,
 				21D9A789200C603E009E9E66 /* Sources */,
 				21D9A78A200C603E009E9E66 /* Frameworks */,
 				21D9A78B200C603E009E9E66 /* Resources */,
+				534E3CF40304530A3993560A /* [CP] Embed Pods Frameworks */,
+				16AF8FC47E30E2004D3D0423 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +138,7 @@
 				TargetAttributes = {
 					21D9A78C200C603E009E9E66 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +174,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		002BB7EE31B59049B9194527 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		16AF8FC47E30E2004D3D0423 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		534E3CF40304530A3993560A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21D9A789200C603E009E9E66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +229,7 @@
 			files = (
 				21D9A793200C603E009E9E66 /* ViewController.swift in Sources */,
 				21D9A791200C603E009E9E66 /* AppDelegate.swift in Sources */,
+				21D9A7A6200C651D009E9E66 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +364,10 @@
 		};
 		21D9A7A0200C603E009E9E66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4N3YF9H6U;
 				INFOPLIST_FILE = HopeHealingAfrica/Info.plist;
@@ -281,6 +375,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hha.HopeHealingAfrica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/HopeHealingAfrica-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,8 +384,10 @@
 		};
 		21D9A7A1200C603E009E9E66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4N3YF9H6U;
 				INFOPLIST_FILE = HopeHealingAfrica/Info.plist;
@@ -297,6 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hha.HopeHealingAfrica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/HopeHealingAfrica-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

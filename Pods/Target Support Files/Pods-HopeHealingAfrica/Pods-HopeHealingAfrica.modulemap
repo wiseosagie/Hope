@@ -1,0 +1,6 @@
+framework module Pods_HopeHealingAfrica {
+  umbrella header "Pods-HopeHealingAfrica-umbrella.h"
+
+  export *
+  module * { export * }
+}
