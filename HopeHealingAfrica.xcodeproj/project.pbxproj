@@ -18,6 +18,7 @@
 		21D9A7AF200C6D4C009E9E66 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7AE200C6D4C009E9E66 /* GradientView.swift */; };
 		21D9A7B2200C7AB8009E9E66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7B1200C7AB8009E9E66 /* Constants.swift */; };
 		21D9A7B4200D1A55009E9E66 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7B3200D1A55009E9E66 /* LoginVC.swift */; };
+		21D9A7B6200D4932009E9E66 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7B5200D4932009E9E66 /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		21D9A7AE200C6D4C009E9E66 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		21D9A7B1200C7AB8009E9E66 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		21D9A7B3200D1A55009E9E66 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		21D9A7B5200D4932009E9E66 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.release.xcconfig"; sourceTree = "<group>"; };
 		BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeHealingAfrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				21D9A7AA200C6815009E9E66 /* ChatVC.swift */,
 				21D9A7AC200C6823009E9E66 /* ChannelVC.swift */,
 				21D9A7B3200D1A55009E9E66 /* LoginVC.swift */,
+				21D9A7B5200D4932009E9E66 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				21D9A7AD200C6823009E9E66 /* ChannelVC.swift in Sources */,
 				21D9A7AB200C6815009E9E66 /* ChatVC.swift in Sources */,
+				21D9A7B6200D4932009E9E66 /* CreateAccountVC.swift in Sources */,
 				21D9A7B4200D1A55009E9E66 /* LoginVC.swift in Sources */,
 				21D9A7AF200C6D4C009E9E66 /* GradientView.swift in Sources */,
 				21D9A791200C603E009E9E66 /* AppDelegate.swift in Sources */,
