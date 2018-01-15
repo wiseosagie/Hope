@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -87,16 +92,68 @@
                     <view key="view" contentMode="scaleToFill" id="BC4-bX-RdR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hhalogo" translatesAutoresizingMaskIntoConstraints="NO" id="0jz-xG-Fd3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018 Hope Healing Africa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj1-f3-6Gm">
+                                <rect key="frame" x="73" y="637" width="229" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.89411764705882346" green="0.19607843137254902" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Lvp-CX-Ymx">
+                                <rect key="frame" x="16" y="546" width="87" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="LWo-oT-ayM"/>
+                                    <constraint firstAttribute="width" constant="87" id="sAo-At-3R7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3s-KW-srk">
+                                <rect key="frame" x="138" y="567" width="99" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.89411764705882346" green="0.19607843137254902" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pw6-gB-y3I">
+                                <rect key="frame" x="0.0" y="286" width="375" height="252"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pw6-gB-y3I" firstAttribute="trailing" secondItem="CYf-m7-gDB" secondAttribute="trailing" id="0cp-Dr-xch"/>
+                            <constraint firstItem="Lvp-CX-Ymx" firstAttribute="top" secondItem="pw6-gB-y3I" secondAttribute="bottom" constant="8" id="2aD-iw-moH"/>
+                            <constraint firstItem="S3s-KW-srk" firstAttribute="leading" secondItem="Lvp-CX-Ymx" secondAttribute="trailing" constant="35" id="AWd-E2-8ea"/>
+                            <constraint firstItem="S3s-KW-srk" firstAttribute="centerY" secondItem="Lvp-CX-Ymx" secondAttribute="centerY" id="CoN-df-KbR"/>
+                            <constraint firstItem="CYf-m7-gDB" firstAttribute="trailing" secondItem="S3s-KW-srk" secondAttribute="trailing" constant="138" id="Fpl-FJ-4Tv"/>
+                            <constraint firstItem="0jz-xG-Fd3" firstAttribute="leading" secondItem="CYf-m7-gDB" secondAttribute="leading" id="HJb-5w-FJl"/>
+                            <constraint firstItem="bj1-f3-6Gm" firstAttribute="centerX" secondItem="0jz-xG-Fd3" secondAttribute="centerX" id="IbI-um-FID"/>
+                            <constraint firstItem="0jz-xG-Fd3" firstAttribute="trailing" secondItem="CYf-m7-gDB" secondAttribute="trailing" id="K71-NP-bu4"/>
+                            <constraint firstItem="pw6-gB-y3I" firstAttribute="leading" secondItem="CYf-m7-gDB" secondAttribute="leading" id="PWz-d7-c9a"/>
+                            <constraint firstItem="CYf-m7-gDB" firstAttribute="bottom" secondItem="0jz-xG-Fd3" secondAttribute="bottom" constant="389" id="Qbe-zl-7g2"/>
+                            <constraint firstItem="0jz-xG-Fd3" firstAttribute="top" secondItem="BC4-bX-RdR" secondAttribute="top" id="UPi-vh-zrJ"/>
+                            <constraint firstItem="Lvp-CX-Ymx" firstAttribute="leading" secondItem="CYf-m7-gDB" secondAttribute="leading" constant="16" id="UVN-Oo-Gvn"/>
+                            <constraint firstItem="CYf-m7-gDB" firstAttribute="trailing" secondItem="bj1-f3-6Gm" secondAttribute="trailing" constant="73" id="eyX-8O-TPD"/>
+                            <constraint firstItem="CYf-m7-gDB" firstAttribute="bottom" secondItem="bj1-f3-6Gm" secondAttribute="bottom" constant="7" id="fNs-et-cL0"/>
+                            <constraint firstItem="S3s-KW-srk" firstAttribute="centerX" secondItem="bj1-f3-6Gm" secondAttribute="centerX" id="g50-cs-mnu"/>
+                            <constraint firstItem="bj1-f3-6Gm" firstAttribute="top" secondItem="Lvp-CX-Ymx" secondAttribute="bottom" constant="8" id="gxH-If-n4q"/>
+                            <constraint firstItem="bj1-f3-6Gm" firstAttribute="leading" secondItem="CYf-m7-gDB" secondAttribute="leading" constant="73" id="kJD-rd-y8i"/>
+                            <constraint firstItem="pw6-gB-y3I" firstAttribute="top" secondItem="0jz-xG-Fd3" secondAttribute="bottom" constant="8" id="p53-9T-3nW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CYf-m7-gDB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRW-Gx-7nA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695" y="-188"/>
+            <point key="canvasLocation" x="693.60000000000002" y="-188.45577211394306"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hhalogo" width="2000" height="2000"/>
+        <image name="profileDefault" width="192" height="192"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
