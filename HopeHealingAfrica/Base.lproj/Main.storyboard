@@ -199,7 +199,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-4C-fa1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-4C-fa1" customClass="RoundedButton" customModule="HopeHealingAfrica" customModuleProvider="target">
                                 <rect key="frame" x="123" y="374" width="128" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="iRt-Qo-DSK"/>
@@ -208,6 +208,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.89411764709999997" green="0.1960784314" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5h-8i-Ort">
                                 <rect key="frame" x="57" y="438" width="261" height="30"/>
@@ -280,7 +285,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-Ei-SfW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-Ei-SfW" customClass="RoundedButton" customModule="HopeHealingAfrica" customModuleProvider="target">
                                 <rect key="frame" x="68" y="591" width="238" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="f0Y-p3-b5r"/>
@@ -289,6 +294,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAcctPressed:" destination="hzV-tT-amg" eventType="touchUpInside" id="Wuz-Uk-ZIl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEl-0h-Fxa">
                                 <rect key="frame" x="57" y="241" width="261" height="30"/>
@@ -297,7 +305,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDH-Si-sc9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDH-Si-sc9" userLabel="Email">
                                 <rect key="frame" x="57" y="295" width="261" height="30"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <nil key="textColor"/>
@@ -336,6 +344,9 @@
                                 <state key="normal" title="Choose Avatar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickAvatarPressed:" destination="hzV-tT-amg" eventType="touchUpInside" id="Sgq-sj-bzi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-1n-32i">
                                 <rect key="frame" x="57" y="553" width="261" height="30"/>
@@ -343,6 +354,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickBGColorPressed:" destination="hzV-tT-amg" eventType="touchUpInside" id="vLu-sy-Apr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -372,6 +386,10 @@
                         <viewLayoutGuide key="safeArea" id="BXK-mp-6gw"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="vDH-Si-sc9" id="EjR-dA-fyo"/>
+                        <outlet property="passTxt" destination="xhC-xn-Azv" id="tx9-jC-ynf"/>
+                        <outlet property="userImg" destination="gPK-of-2Lp" id="VvZ-ur-Efk"/>
+                        <outlet property="usernameTxt" destination="TEl-0h-Fxa" id="KsF-Dn-krk"/>
                         <segue destination="ndx-rS-XfV" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="lD2-4N-uAP"/>
                     </connections>
                 </viewController>

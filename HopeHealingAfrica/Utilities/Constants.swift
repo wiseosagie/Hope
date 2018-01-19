@@ -12,8 +12,8 @@ import Foundation
 typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL constant
-let BASE_URL = " https://hopehealingafrica.herokuapp.com/"
-let URL_REGITER = "\(BASE_URL)account/register"
+let BASE_URL = "https://hopehealingafrica.herokuapp.com/v1/"
+let URL_REGISTER = "\(BASE_URL)account/register"
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
