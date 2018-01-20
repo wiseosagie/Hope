@@ -33,10 +33,18 @@ class CreateAccountVC: UIViewController {
         AuthService.instance.registerUser(email: email, password: pass) {
             (success) in
             if success {
-                print("registered user")
+                AuthService.instance.loginUser(email: email, password: pass, completion: {(success) in
+                    
+                    if success {
+                        print("Logged in user", AuthService.instance.authToken)
+                    }
+                })
             }
         }
     }
+    
+   
+    
     @IBAction func pickAvatarPressed(_ sender: Any) {
     }
     @IBAction func pickBGColorPressed(_ sender: Any) {
