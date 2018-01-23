@@ -391,6 +391,7 @@
                         <outlet property="userImg" destination="gPK-of-2Lp" id="VvZ-ur-Efk"/>
                         <outlet property="usernameTxt" destination="TEl-0h-Fxa" id="KsF-Dn-krk"/>
                         <segue destination="ndx-rS-XfV" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="lD2-4N-uAP"/>
+                        <segue destination="Bs6-fi-pAC" kind="show" identifier="toAvatarPicker" id="Gf9-Qs-RIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHu-7M-58Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,12 +399,102 @@
             </objects>
             <point key="canvasLocation" x="2405.5999999999999" y="-188.45577211394306"/>
         </scene>
+        <!--Avatar PickerVC-->
+        <scene sceneID="sn3-Gd-fgL">
+            <objects>
+                <viewController id="Bs6-fi-pAC" customClass="AvatarPickerVC" customModule="HopeHealingAfrica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfr-fQ-EHb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMR-jz-HWm">
+                                <rect key="frame" x="0.0" y="28" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="M3v-kf-l4P"/>
+                                    <constraint firstAttribute="height" constant="28" id="yze-xk-Rnz"/>
+                                </constraints>
+                                <state key="normal" image="smackBack"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="Bs6-fi-pAC" eventType="touchUpInside" id="qxu-q7-SYG"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yYY-Ko-HqI">
+                                <rect key="frame" x="107.5" y="28" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="efk-gN-w9p"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Dark"/>
+                                    <segment title="Light"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="Bs6-fi-pAC" eventType="valueChanged" id="Hqg-h0-tLc"/>
+                                </connections>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-MM-mxc">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Abq-fR-GVw">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="vr3-w9-Soc" customClass="AvatarCell" customModule="HopeHealingAfrica" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qLE-m0-Wy6">
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="qLE-m0-Wy6" secondAttribute="trailing" constant="10" id="f1O-gA-ZVZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="qLE-m0-Wy6" secondAttribute="bottom" constant="10" id="mCq-yq-iVL"/>
+                                            <constraint firstItem="qLE-m0-Wy6" firstAttribute="leading" secondItem="vr3-w9-Soc" secondAttribute="leading" constant="10" id="wnw-8u-JWd"/>
+                                            <constraint firstItem="qLE-m0-Wy6" firstAttribute="top" secondItem="vr3-w9-Soc" secondAttribute="top" constant="10" id="zDY-aR-0ag"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="avatarImg" destination="qLE-m0-Wy6" id="3qM-AC-3eG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yYY-Ko-HqI" firstAttribute="top" secondItem="NAD-v3-hIT" secondAttribute="top" constant="8" id="80Q-J2-KTg"/>
+                            <constraint firstItem="PMR-jz-HWm" firstAttribute="leading" secondItem="NAD-v3-hIT" secondAttribute="leading" id="Ltz-sW-Wxr"/>
+                            <constraint firstItem="e7e-MM-mxc" firstAttribute="leading" secondItem="NAD-v3-hIT" secondAttribute="leading" id="bbI-qf-hH1"/>
+                            <constraint firstItem="e7e-MM-mxc" firstAttribute="top" secondItem="PMR-jz-HWm" secondAttribute="bottom" constant="20" id="daH-iJ-Wc1"/>
+                            <constraint firstItem="NAD-v3-hIT" firstAttribute="bottom" secondItem="e7e-MM-mxc" secondAttribute="bottom" id="g7K-Em-zyf"/>
+                            <constraint firstItem="yYY-Ko-HqI" firstAttribute="centerX" secondItem="hfr-fQ-EHb" secondAttribute="centerX" id="ihW-P6-NSX"/>
+                            <constraint firstItem="PMR-jz-HWm" firstAttribute="top" secondItem="NAD-v3-hIT" secondAttribute="top" constant="8" id="nXb-0J-PXp"/>
+                            <constraint firstItem="NAD-v3-hIT" firstAttribute="trailing" secondItem="e7e-MM-mxc" secondAttribute="trailing" id="w5l-Th-eEI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NAD-v3-hIT"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="e7e-MM-mxc" id="6bW-iM-KtW"/>
+                        <outlet property="segmentedControl" destination="yYY-Ko-HqI" id="PSR-KB-Ali"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgK-vH-UkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200.8000000000002" y="-188.45577211394306"/>
+        </scene>
     </scenes>
     <resources>
         <image name="closeButton" width="28" height="28"/>
         <image name="hha" width="100" height="100"/>
         <image name="hhalogo" width="2000" height="2000"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
