@@ -100,7 +100,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hhalogo" translatesAutoresizingMaskIntoConstraints="NO" id="0jz-xG-Fd3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Lvp-CX-Ymx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Lvp-CX-Ymx" customClass="CircleImage" customModule="HopeHealingAfrica" customModuleProvider="target">
                                 <rect key="frame" x="16" y="550" width="87" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="87" id="JoR-sC-Zhs"/>
@@ -178,6 +178,7 @@
                     <connections>
                         <outlet property="hope" destination="0jz-xG-Fd3" id="DcO-ko-yqw"/>
                         <outlet property="loginBtn" destination="S3s-KW-srk" id="G7J-Uu-xaU"/>
+                        <outlet property="userImg" destination="Lvp-CX-Ymx" id="pFr-UF-xPO"/>
                         <segue destination="u8r-eI-mGz" kind="show" identifier="toLogin" id="6bB-ic-SqY"/>
                     </connections>
                 </viewController>
@@ -333,7 +334,7 @@
                                     <action selector="createAcctBtnPressed:" destination="u8r-eI-mGz" eventType="touchUpInside" id="sVc-BU-DHR"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="gPK-of-2Lp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="gPK-of-2Lp" customClass="CircleImage" customModule="HopeHealingAfrica" customModuleProvider="target">
                                 <rect key="frame" x="120" y="397" width="135" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="ykC-Tq-eMI"/>
@@ -358,16 +359,22 @@
                                     <action selector="pickBGColorPressed:" destination="hzV-tT-amg" eventType="touchUpInside" id="vLu-sy-Apr"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-Fr-88q">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xhC-xn-Azv" firstAttribute="leading" secondItem="vDH-Si-sc9" secondAttribute="leading" id="0yc-fi-azz"/>
+                            <constraint firstItem="r8o-Fr-88q" firstAttribute="centerY" secondItem="xL5-dk-yrv" secondAttribute="centerY" id="15U-G4-RUa"/>
                             <constraint firstItem="gPK-of-2Lp" firstAttribute="centerX" secondItem="fWU-Ei-SfW" secondAttribute="centerX" id="1Ns-Uv-fHQ"/>
                             <constraint firstItem="cUj-8L-SMK" firstAttribute="top" secondItem="gPK-of-2Lp" secondAttribute="bottom" constant="8" symbolic="YES" id="1cd-ML-Yw2"/>
                             <constraint firstItem="vDH-Si-sc9" firstAttribute="centerX" secondItem="xL5-dk-yrv" secondAttribute="centerX" id="3Rv-ea-7tP"/>
                             <constraint firstItem="fWU-Ei-SfW" firstAttribute="leading" secondItem="BXK-mp-6gw" secondAttribute="leading" constant="68" id="87E-9H-Kc3"/>
                             <constraint firstItem="vDH-Si-sc9" firstAttribute="trailing" secondItem="JD2-sM-ADT" secondAttribute="trailing" id="AL0-8m-E49"/>
                             <constraint firstItem="vDH-Si-sc9" firstAttribute="trailing" secondItem="TEl-0h-Fxa" secondAttribute="trailing" id="AzS-3x-uxD"/>
+                            <constraint firstItem="r8o-Fr-88q" firstAttribute="centerX" secondItem="xL5-dk-yrv" secondAttribute="centerX" id="E2m-Cg-3ds"/>
                             <constraint firstItem="xhC-xn-Azv" firstAttribute="trailing" secondItem="vDH-Si-sc9" secondAttribute="trailing" id="Hjf-jm-kLv"/>
                             <constraint firstAttribute="bottom" secondItem="fWU-Ei-SfW" secondAttribute="bottom" constant="20" symbolic="YES" id="HmA-oB-zmB"/>
                             <constraint firstItem="vDH-Si-sc9" firstAttribute="top" secondItem="TEl-0h-Fxa" secondAttribute="bottom" constant="24" id="Ini-Iz-e5O"/>
@@ -386,8 +393,10 @@
                         <viewLayoutGuide key="safeArea" id="BXK-mp-6gw"/>
                     </view>
                     <connections>
+                        <outlet property="bkGnd" destination="xL5-dk-yrv" id="q7G-Yc-cGt"/>
                         <outlet property="emailTxt" destination="vDH-Si-sc9" id="EjR-dA-fyo"/>
                         <outlet property="passTxt" destination="xhC-xn-Azv" id="tx9-jC-ynf"/>
+                        <outlet property="spinner" destination="r8o-Fr-88q" id="87q-S3-hYq"/>
                         <outlet property="userImg" destination="gPK-of-2Lp" id="VvZ-ur-Efk"/>
                         <outlet property="usernameTxt" destination="TEl-0h-Fxa" id="KsF-Dn-krk"/>
                         <segue destination="ndx-rS-XfV" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="lD2-4N-uAP"/>
