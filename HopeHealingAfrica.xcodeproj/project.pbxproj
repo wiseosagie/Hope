@@ -25,6 +25,8 @@
 		21D9A7BF20159DE4009E9E66 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7BE20159DE4009E9E66 /* AvatarPickerVC.swift */; };
 		21D9A7C12015A05B009E9E66 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7C02015A05B009E9E66 /* AvatarCell.swift */; };
 		21D9A7C320197A7E009E9E66 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7C220197A7E009E9E66 /* CircleImage.swift */; };
+		21D9A7C6201991AA009E9E66 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7C4201991AA009E9E66 /* ProfileVC.swift */; };
+		21D9A7C7201991AA009E9E66 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A7C5201991AA009E9E66 /* ProfileVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		21D9A7BE20159DE4009E9E66 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		21D9A7C02015A05B009E9E66 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		21D9A7C220197A7E009E9E66 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		21D9A7C4201991AA009E9E66 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		21D9A7C5201991AA009E9E66 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.release.xcconfig"; sourceTree = "<group>"; };
 		BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeHealingAfrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		21D9A78F200C603E009E9E66 /* HopeHealingAfrica */ = {
 			isa = PBXGroup;
 			children = (
+				21D9A7C8201991C8009E9E66 /* XIBs */,
 				21D9A7B72010176C009E9E66 /* Services */,
 				21D9A7B0200C7A86009E9E66 /* Utilities */,
 				21D9A7A9200C67FA009E9E66 /* Model */,
@@ -120,6 +125,7 @@
 				21D9A7B3200D1A55009E9E66 /* LoginVC.swift */,
 				21D9A7B5200D4932009E9E66 /* CreateAccountVC.swift */,
 				21D9A7BE20159DE4009E9E66 /* AvatarPickerVC.swift */,
+				21D9A7C4201991AA009E9E66 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +163,14 @@
 				21D9A7BC2012E2D3009E9E66 /* UserDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		21D9A7C8201991C8009E9E66 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				21D9A7C5201991AA009E9E66 /* ProfileVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		5752B5F441298C9F3ABCE78B /* Frameworks */ = {
@@ -239,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D9A7C7201991AA009E9E66 /* ProfileVC.xib in Resources */,
 				21D9A79B200C603E009E9E66 /* LaunchScreen.storyboard in Resources */,
 				21D9A798200C603E009E9E66 /* Assets.xcassets in Resources */,
 				21D9A796200C603E009E9E66 /* Main.storyboard in Resources */,
@@ -300,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D9A7C6201991AA009E9E66 /* ProfileVC.swift in Sources */,
 				21D9A7AD200C6823009E9E66 /* ChannelVC.swift in Sources */,
 				21D9A7BF20159DE4009E9E66 /* AvatarPickerVC.swift in Sources */,
 				21D9A7BB2011B926009E9E66 /* RoundedButton.swift in Sources */,
