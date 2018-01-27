@@ -29,6 +29,7 @@
 		21D9A7C7201991AA009E9E66 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A7C5201991AA009E9E66 /* ProfileVC.xib */; };
 		21D9A7CA201C2CD8009E9E66 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7C9201C2CD8009E9E66 /* MessageService.swift */; };
 		21D9A7CC201C2D20009E9E66 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7CB201C2D20009E9E66 /* Channel.swift */; };
+		21D9A7CE201C3BCD009E9E66 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7CD201C3BCD009E9E66 /* ChannelCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		21D9A7C5201991AA009E9E66 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		21D9A7C9201C2CD8009E9E66 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		21D9A7CB201C2D20009E9E66 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		21D9A7CD201C3BCD009E9E66 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.release.xcconfig"; sourceTree = "<group>"; };
 		BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeHealingAfrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				21D9A7BA2011B926009E9E66 /* RoundedButton.swift */,
 				21D9A7C02015A05B009E9E66 /* AvatarCell.swift */,
 				21D9A7C220197A7E009E9E66 /* CircleImage.swift */,
+				21D9A7CD201C3BCD009E9E66 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21D9A7C6201991AA009E9E66 /* ProfileVC.swift in Sources */,
+				21D9A7CE201C3BCD009E9E66 /* ChannelCell.swift in Sources */,
 				21D9A7AD200C6823009E9E66 /* ChannelVC.swift in Sources */,
 				21D9A7BF20159DE4009E9E66 /* AvatarPickerVC.swift in Sources */,
 				21D9A7BB2011B926009E9E66 /* RoundedButton.swift in Sources */,
