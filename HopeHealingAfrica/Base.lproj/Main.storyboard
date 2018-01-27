@@ -214,6 +214,9 @@
                                         <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="u8r-eI-mGz" eventType="touchUpInside" id="oud-Qs-ZsG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5h-8i-Ort">
                                 <rect key="frame" x="57" y="438" width="261" height="30"/>
@@ -242,12 +245,17 @@
                                     <action selector="closeButton:" destination="u8r-eI-mGz" eventType="touchUpInside" id="Mvt-v5-LxN"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="miY-yt-hRa">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="trailing" secondItem="h5h-8i-Ort" secondAttribute="trailing" id="39C-Bd-Hdl"/>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="leading" secondItem="h5h-8i-Ort" secondAttribute="leading" id="3sA-3q-OXM"/>
                             <constraint firstItem="Udf-4C-fa1" firstAttribute="leading" secondItem="JsJ-ki-rku" secondAttribute="leading" constant="123" id="G2x-Aq-GD1"/>
+                            <constraint firstItem="miY-yt-hRa" firstAttribute="centerY" secondItem="Ocw-fE-RPI" secondAttribute="centerY" id="Ks7-Km-kkU"/>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="centerX" secondItem="Udf-4C-fa1" secondAttribute="centerX" id="Mq1-SX-M2A"/>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="leading" secondItem="JsJ-ki-rku" secondAttribute="leading" constant="57" id="QV7-8N-Nwv"/>
                             <constraint firstItem="Udf-4C-fa1" firstAttribute="top" secondItem="mpW-47-Jn2" secondAttribute="bottom" constant="37" id="Tvh-th-P69"/>
@@ -256,6 +264,7 @@
                             <constraint firstItem="mpW-47-Jn2" firstAttribute="leading" secondItem="aFN-FS-WaW" secondAttribute="leading" id="c3u-65-v8R"/>
                             <constraint firstItem="mpW-47-Jn2" firstAttribute="top" secondItem="aFN-FS-WaW" secondAttribute="bottom" constant="46" id="dgI-sX-BUr"/>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="centerX" secondItem="Ocw-fE-RPI" secondAttribute="centerX" id="frX-kW-ref"/>
+                            <constraint firstItem="miY-yt-hRa" firstAttribute="centerX" secondItem="Ocw-fE-RPI" secondAttribute="centerX" id="mvy-Aa-Lhj"/>
                             <constraint firstItem="h5h-8i-Ort" firstAttribute="top" secondItem="Udf-4C-fa1" secondAttribute="bottom" constant="8" symbolic="YES" id="nSh-xT-ave"/>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="top" secondItem="Ocw-fE-RPI" secondAttribute="top" constant="231" id="pzv-IQ-zs9"/>
                             <constraint firstItem="aFN-FS-WaW" firstAttribute="top" secondItem="69T-JJ-tNv" secondAttribute="bottom" constant="51" id="tH5-ct-23n"/>
@@ -265,6 +274,9 @@
                     <connections>
                         <outlet property="closeButton" destination="Dsd-Y2-1iB" id="VlR-yN-ofB"/>
                         <outlet property="hope" destination="69T-JJ-tNv" id="94U-ac-Hfw"/>
+                        <outlet property="passwordTxt" destination="mpW-47-Jn2" id="rJU-KQ-gN1"/>
+                        <outlet property="spinner" destination="miY-yt-hRa" id="fLF-L0-TAl"/>
+                        <outlet property="usernameTxt" destination="aFN-FS-WaW" id="R7I-O5-URl"/>
                         <segue destination="hzV-tT-amg" kind="show" identifier="toCreateAccount" id="J3f-QN-6ic"/>
                     </connections>
                 </viewController>

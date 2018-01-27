@@ -13,6 +13,14 @@ class LoginVC: UIViewController {
     @IBOutlet weak var hope: UIImageView!
     @IBOutlet weak var closeButton: UIButton!
     
+    //Outlets
+    
+    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var passwordTxt: UITextField!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +28,7 @@ class LoginVC: UIViewController {
         
         closeButton.frame = CGRect(x: view.frame.size.width / 2 - closeButton.frame.size.width / 2, y: 500, width: closeButton.frame.size.width, height: closeButton.frame.size.height)
 
+        setUpView()
         
     }
 
@@ -32,14 +41,34 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginPressed(_ sender: Any) {
+        spinner.isHidden = false
+        spinner.startAnimating()
+        
+        guard let email = usernameTxt.text, usernameTxt.text != "" else {return}
+        guard let pass = passwordTxt.text, passwordTxt.text != "" else {return}
+        
+        AuthService.instance.loginUser(email: email, password: pass) { (success) in
+            if success {
+                AuthService.instance.findUserByEmail(completion: { (success) in
+                    if success {
+                        NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                        self.spinner.isHidden = true
+                        self.spinner.stopAnimating()
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                })
+            }
+        }
+        
     }
-    */
+    
+    
+    func setUpView() {
+        spinner.isHidden = true
+        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSForegroundColorAttributeName: smackPurplePlaceHolder])
+        
+        passwordTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSForegroundColorAttributeName: smackPurplePlaceHolder])
+    }
 
 }
