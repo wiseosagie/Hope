@@ -30,6 +30,9 @@
 		21D9A7CA201C2CD8009E9E66 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7C9201C2CD8009E9E66 /* MessageService.swift */; };
 		21D9A7CC201C2D20009E9E66 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7CB201C2D20009E9E66 /* Channel.swift */; };
 		21D9A7CE201C3BCD009E9E66 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7CD201C3BCD009E9E66 /* ChannelCell.swift */; };
+		21D9A7D1201C470B009E9E66 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7CF201C470B009E9E66 /* AddChannelVC.swift */; };
+		21D9A7D2201C470B009E9E66 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D9A7D0201C470B009E9E66 /* AddChannelVC.xib */; };
+		21D9A7D4201CBB8A009E9E66 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D9A7D3201CBB89009E9E66 /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		21D9A7C9201C2CD8009E9E66 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		21D9A7CB201C2D20009E9E66 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		21D9A7CD201C3BCD009E9E66 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		21D9A7CF201C470B009E9E66 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		21D9A7D0201C470B009E9E66 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		21D9A7D3201CBB89009E9E66 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		AA5DD7DA11050DCCE4F64A38 /* Pods-HopeHealingAfrica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.release.xcconfig"; sourceTree = "<group>"; };
 		BE6718E4A827005B8FEBBDFD /* Pods_HopeHealingAfrica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopeHealingAfrica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98D5DD8F9040E13B827F0C7 /* Pods-HopeHealingAfrica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopeHealingAfrica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopeHealingAfrica/Pods-HopeHealingAfrica.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 				21D9A7B5200D4932009E9E66 /* CreateAccountVC.swift */,
 				21D9A7BE20159DE4009E9E66 /* AvatarPickerVC.swift */,
 				21D9A7C4201991AA009E9E66 /* ProfileVC.swift */,
+				21D9A7CF201C470B009E9E66 /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 				21D9A7B8201017A4009E9E66 /* AuthService.swift */,
 				21D9A7BC2012E2D3009E9E66 /* UserDataService.swift */,
 				21D9A7C9201C2CD8009E9E66 /* MessageService.swift */,
+				21D9A7D3201CBB89009E9E66 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				21D9A7C5201991AA009E9E66 /* ProfileVC.xib */,
+				21D9A7D0201C470B009E9E66 /* AddChannelVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -262,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D9A7D2201C470B009E9E66 /* AddChannelVC.xib in Resources */,
 				21D9A7C7201991AA009E9E66 /* ProfileVC.xib in Resources */,
 				21D9A79B200C603E009E9E66 /* LaunchScreen.storyboard in Resources */,
 				21D9A798200C603E009E9E66 /* Assets.xcassets in Resources */,
@@ -324,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D9A7D4201CBB8A009E9E66 /* SocketService.swift in Sources */,
 				21D9A7C6201991AA009E9E66 /* ProfileVC.swift in Sources */,
 				21D9A7CE201C3BCD009E9E66 /* ChannelCell.swift in Sources */,
 				21D9A7AD200C6823009E9E66 /* ChannelVC.swift in Sources */,
@@ -337,6 +348,7 @@
 				21D9A7B6200D4932009E9E66 /* CreateAccountVC.swift in Sources */,
 				21D9A7B9201017A4009E9E66 /* AuthService.swift in Sources */,
 				21D9A7B4200D1A55009E9E66 /* LoginVC.swift in Sources */,
+				21D9A7D1201C470B009E9E66 /* AddChannelVC.swift in Sources */,
 				21D9A7AF200C6D4C009E9E66 /* GradientView.swift in Sources */,
 				21D9A7C12015A05B009E9E66 /* AvatarCell.swift in Sources */,
 				21D9A791200C603E009E9E66 /* AppDelegate.swift in Sources */,

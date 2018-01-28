@@ -82,6 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="qVW-JZ-r7R"/>
                     </view>
                     <connections>
+                        <outlet property="channelNameLbl" destination="Z8C-8C-rz8" id="tjO-ig-GtB"/>
                         <outlet property="menuBtn" destination="FaS-10-E8F" id="hSc-6A-WNB"/>
                     </connections>
                 </viewController>
@@ -114,7 +115,7 @@
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.89411764709999997" green="0.1960784314" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="EiP-Y5-XXJ" customClass="ChannelCell" customModule="HopeHealingAfrica" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="EiP-Y5-XXJ" customClass="ChannelCell" customModule="HopeHealingAfrica" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EiP-Y5-XXJ" id="XXL-mT-Dqw">
@@ -156,12 +157,21 @@
                                 <color key="textColor" red="0.89411764705882346" green="0.19607843137254902" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-cD-gvA">
+                                <rect key="frame" x="315" y="247" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="F2b-jX-mgn" eventType="touchUpInside" id="PW5-Ze-lrF"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CYf-m7-gDB" firstAttribute="trailing" secondItem="S3s-KW-srk" secondAttribute="trailing" constant="137" id="5dN-dC-LRK"/>
                             <constraint firstItem="S3s-KW-srk" firstAttribute="top" secondItem="pw6-gB-y3I" secondAttribute="bottom" constant="37" id="Da6-g9-zNi"/>
                             <constraint firstItem="0jz-xG-Fd3" firstAttribute="top" secondItem="BC4-bX-RdR" secondAttribute="top" id="JKR-Mo-gPD"/>
+                            <constraint firstItem="bZd-cD-gvA" firstAttribute="top" secondItem="CYf-m7-gDB" secondAttribute="top" constant="227" id="K9u-bc-UaD"/>
+                            <constraint firstItem="CYf-m7-gDB" firstAttribute="bottom" secondItem="bZd-cD-gvA" secondAttribute="bottom" constant="398" id="KIW-Gx-iO4"/>
                             <constraint firstItem="Lvp-CX-Ymx" firstAttribute="top" secondItem="pw6-gB-y3I" secondAttribute="bottom" constant="12" id="OgL-09-1cg"/>
                             <constraint firstItem="CYf-m7-gDB" firstAttribute="bottom" secondItem="Lvp-CX-Ymx" secondAttribute="bottom" constant="34" id="TUa-mK-hVz"/>
                             <constraint firstItem="0jz-xG-Fd3" firstAttribute="leading" secondItem="pw6-gB-y3I" secondAttribute="leading" id="Yc7-B0-0dA"/>
@@ -169,9 +179,11 @@
                             <constraint firstItem="bj1-f3-6Gm" firstAttribute="bottom" secondItem="CYf-m7-gDB" secondAttribute="bottom" id="bD5-5k-4R7"/>
                             <constraint firstItem="bj1-f3-6Gm" firstAttribute="top" secondItem="S3s-KW-srk" secondAttribute="bottom" constant="36" id="bMx-V8-vL2"/>
                             <constraint firstAttribute="trailing" secondItem="0jz-xG-Fd3" secondAttribute="trailing" id="gSs-Qi-6wm"/>
+                            <constraint firstItem="bZd-cD-gvA" firstAttribute="leading" secondItem="CYf-m7-gDB" secondAttribute="leading" constant="315" id="hdr-3s-bke"/>
                             <constraint firstItem="0jz-xG-Fd3" firstAttribute="leading" secondItem="BC4-bX-RdR" secondAttribute="leading" id="jMG-ST-nxi"/>
                             <constraint firstItem="pw6-gB-y3I" firstAttribute="top" secondItem="0jz-xG-Fd3" secondAttribute="bottom" constant="8" symbolic="YES" id="lGM-Ck-qJy"/>
                             <constraint firstItem="0jz-xG-Fd3" firstAttribute="trailing" secondItem="pw6-gB-y3I" secondAttribute="trailing" id="mkZ-uY-cfx"/>
+                            <constraint firstItem="CYf-m7-gDB" firstAttribute="trailing" secondItem="bZd-cD-gvA" secondAttribute="trailing" constant="38" id="pGX-Ag-v1R"/>
                             <constraint firstItem="pw6-gB-y3I" firstAttribute="centerX" secondItem="bj1-f3-6Gm" secondAttribute="centerX" id="rLc-Re-k4k"/>
                             <constraint firstItem="S3s-KW-srk" firstAttribute="leading" secondItem="Lvp-CX-Ymx" secondAttribute="trailing" constant="8" symbolic="YES" id="s61-Oa-N5P"/>
                             <constraint firstItem="Lvp-CX-Ymx" firstAttribute="centerY" secondItem="S3s-KW-srk" secondAttribute="centerY" id="sLM-oq-ke3"/>
@@ -515,6 +527,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
         <image name="hha" width="100" height="100"/>
         <image name="hhalogo" width="2000" height="2000"/>
